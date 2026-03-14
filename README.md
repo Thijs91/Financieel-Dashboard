@@ -1,64 +1,101 @@
-# 🏦 Interactive Bank Dashboard
+# Bank Export Categorisatie Tool en Dashboard
 
-Een privacy-vriendelijke, lokaal-eerst webapplicatie om banktransacties (CSV) te visualiseren. Dit dashboard vervangt traditionele Excel draaitabellen door een moderne, interactieve interface die volledig in de browser draait.
+Een privacy-vriendelijke, lokale (web)applicatie om banktransacties (CSV) te visualiseren. Het project is **100% Privacy** vriendelijk. Je bankgegevens verlaten nooit je PC en er zijn geen servers en/of cloud-opslag nodig nadat je de bankgegevens hebt gedownload. De (web)applicatie draait lokaal en ook offline.
+  
 
-## ✨ Belangrijkste Functies
+Dit project bevat een Python-script en een categorisatiebestand om banktransacties automatisch te categoriseren. Het script leest een CSV-bestand met banktransacties, past categorisatieregels toe, en exporteert het resultaat in een gestructureerd formaat.   
 
-- **100% Privacy:** Je bankgegevens verlaten nooit je browser. Geen servers, geen cloud-opslag.
-- **Interactieve Pivot Tabel:** Navigeer door je uitgaven via een uitklapbare hiërarchie (Categorie > Subcategorie > Detail).
-- **Financiële Trends:** Visuele weergave van inkomsten vs. uitgaven en categorieverdelingen via Chart.js.
-- **Periode Filtering:** Selecteer eenvoudig specifieke maanden via een interactieve tijd-slider.
-- **Dark & Light Mode:** Volledige ondersteuning voor zowel lichte als donkere thema's.
-- **PDF Export:** Genereer een schoon financieel overzicht (zonder ruwe gegevens) voor je eigen administratie.
+## Bestanden
 
-### Interactieve Pivot Tabel
-De tabel in het tabblad **"Financieel Overzicht"** is hiërarchisch opgebouwd. Klik op de pijl (`▸`) voor een categorie om de subcategorieën en details uit te klappen. Onderaan de tabel vind je het **Netto Resultaat** per maand (Inkomsten + Uitgaven).
+### 1. `Categorie toekenning Bank.py`
 
-### Periode Slider
-Nadat de gegevens zijn ingeladen, verschijnt er een slider. Hiermee kun je het tijdsbereik aanpassen. De grafieken en de tabel worden direct bijgewerkt wanneer je de slider verschuift.
+Dit Python-script voert de volgende stappen uit:
 
-### PDF Export
-Gebruik de knop **"Exporteer PDF"** rechtsboven om een printvriendelijke versie van je overzicht te maken. De ruwe transactiegegevens worden automatisch weggelaten uit de export voor een schoon overzicht.
+- **Laden van categorisatieregels**: Leest het `Categorie.md`-bestand en parseert de regels voor categorisatie.
+- **Laden van banktransacties**: Leest een CSV-bestand met banktransacties en detecteert automatisch de kolommen.
+- **Normaliseren van omschrijvingen**: Maakt omschrijvingen van transacties uniform voor betere matching.
+- **Categoriseren van transacties**: Past verschillende matching-strategieën toe om transacties te categoriseren:
+  - Exacte match op canonical naam
+  - Exacte match op aliases
+  - Woord-boundary match
+  - Substring match
+  - Partial word match
+  - Fuzzy match (met drempelwaarde)
+  - IBAN match (fallback)
+- **Exporteren van resultaten**: Slaat de gecategoriseerde transacties op in CSV-bestanden.
 
+### 2. `Categorie.md`
 
-## 🚀 Gebruik
+Dit bestand bevat de categorisatieregels in een gestructureerd formaat. Elke regel definieert een categorie, subcategorie, detail, canonical naam, en optionele aliases. Het bestand is ingedeeld in secties voor verschillende soorten uitgaven, zoals:
 
-Er is geen installatie of backend nodig.
+- **Bank kosten**: Kosten voor rekeningen en incasso's.
+- **Huishouden**: Interne overboekingen, boodschappen, en huishoudelijke uitgaven.
+- **Zorg**: Vergoedingen en zorgkosten.
+- **Belastingen**: Gemeentelijke, regionale, en nationale belastingen.
+- **Kinderopvang**: Toeslagen en bijdragen voor kinderopvang.
+- **Verzekeringen & Hypotheek**: Hypotheek en verzekeringskosten.
+- **Utiliteiten & Abonnementen**: Energie, internet, streamingdiensten, en abonnementen.
+- **Verzorging & Drogisterij**: Uitgaven aan drogisterijen en kappers.
+- **Supermarkten**: Uitgaven aan verschillende supermarkten.
+- **Bakkers / Slagers / Kaas / Overig boodschappen**: Specifieke boodschappen.
+- **Huis, Tuin & Dier**: Uitgaven aan bouwmaterialen, tuinartikelen, en dierenbenodigdheden.
+- **Auto / Tanken / Laden**: Kosten voor parkeren, wasstraten, onderhoud, laden, en tanken.
+- **OV / Mobiliteit**: Openbaar vervoer en taxi's.
+- **Kleding & Mode**: Kleding, schoenen, en accessoires.
+- **Elektronica / Winkels**: Aankopen van elektronica en meubels.
+- **Horeca & Fastfood**: Uitgaven aan restaurants, cafés, en fastfood.
+- **Logistiek**: Kosten voor pakketdiensten.
+- **Uitjes**: Uitgaven aan musea en andere uitjes.
+- **Overig**: Diverse andere uitgaven.
 
-1.  Download de repository of kopieer de bestanden.
-2.  Open `Dashboard.html` in een moderne webbrowser (Chrome, Firefox, Edge).
-3.  Upload je gecategoriseerde CSV-bestand.
+## Gebruik
 
-## 📊 CSV-Specificaties
+1. **Instellingen**: Pas de bestandslocaties aan in het Python-script:
+   - `csv_bank_path`: Locatie van het CSV-bestand met banktransacties.
+   - `categorisatie_path`: Locatie van het `Categorie.md`-bestand.
+   - `export_dir`: Locatie waar de resultaten worden opgeslagen.
 
-Het dashboard verwacht een **puntkomma-gescheiden (`;`)** CSV-bestand met minimaal de volgende kolommen in de kopregel:
+2. **Uitvoeren**: Voer het script uit om de transacties te categoriseren en de resultaten te exporteren.
 
-| Veldnaam | Status | Beschrijving | Voorbeeld |
-| :--- | :--- | :--- | :--- |
-| **Datum** | **Verplicht** | Transactiedatum (`D-M-YYYY` of `DD-MM-YYYY`). | `15-03-2026` |
-| **Bedrag** | **Verplicht** | De financiële waarde (gebruik `,` of `.` voor decimalen). | `-45,50` of `1200.00` |
-| **Categorie** | Optioneel* | De hoofdgroep voor de pivot-tabel en grafieken. | `Vaste lasten` |
-| **Subcategorie** | Optioneel* | Het tweede niveau in de hiërarchie. | `Huur` |
-| **Detail** | Optioneel* | Het diepste niveau (bijv. de winkel of omschrijving). | `Woningbouwvereniging` |
+3. **Resultaten**: De gecategoriseerde transacties worden opgeslagen in CSV-bestanden in de opgegeven exportdirectory.
 
-*\* Indien deze velden ontbreken, worden transacties gegroepeerd onder "Ongecategoriseerd" of "--".*
+## Voorbeeld
 
-#### Verder relevant:
-*   **Duizendtal-scheiding:** Gebruik **geen** scheidingsteken voor duizendtallen (`1200,50` in plaats van `1.200,50`).
-*   **Lege regels:** Deze worden automatisch overgeslagen tijdens het inladen.
+Een voorbeeld van een categorisatieregel in `Categorie.md`:
 
+```csv
+Huishouden;Boodschappen;Supermarkt;albert heijn;ah,appie
+```
 
-## 🛠️ Gebruikte Technologieën
+Dit betekent:
+- **Categorie**: Huishouden
+- **Subcategorie**: Boodschappen
+- **Detail**: Supermarkt
+- **Canonical naam**: albert heijn
+- **Aliassen**: ah, appie
 
-- **Vanilla JS/HTML5/CSS3:** Geen frameworks nodig voor maximale snelheid en eenvoud.
-- **[PapaParse](https://www.papaparse.com/):** Voor snelle en robuuste CSV-verwerking.
-- **[Chart.js](https://www.chartjs.org/):** Voor interactieve grafieken.
-- **[noUiSlider](https://refreshless.com/nouislider/):** Voor de tijd-range slider.
+Transacties met omschrijvingen die overeenkomen met "albert heijn", "ah", of "appie" worden gecategoriseerd onder "Huishouden > Boodschappen > Supermarkt".
 
-## 🔒 Privacy & Veiligheid
+## Dashboard
 
-Omdat dit een statische HTML-applicatie is, is er geen risico op datalekken via een server. Alle verwerking vindt plaats in het werkgeheugen (RAM) van je eigen computer. Zodra je de tab sluit, worden de data uit het geheugen gewist.
+Het project bevat ook een `Dashboard.html`-bestand dat een interactief financieel dashboard biedt. Dit dashboard biedt de volgende functionaliteiten:
 
-## 📜 Licentie
+- **Financieel Overzicht**: Visualiseert inkomsten en uitgaven per maand met behulp van grafieken.
+- **Categorisatie Analyse**: Toont een verdeling van uitgaven per categorie in een cirkeldiagram.
+- **Geïmporteerde Data**: Laat de ruwe transactiegegevens zien in een tabelvorm.
+- **Periode Selectie**: Gebruik een slider om een specifieke periode te selecteren voor analyse.
+- **Thema Ondersteuning**: Schakel tussen licht en donker thema voor betere leesbaarheid.
+
+### Gebruik van het Dashboard
+
+1. **Uploaden van Data**: Laad een CSV-bestand met gecategoriseerde transacties om het dashboard te vullen.
+2. **Analyse**: Bekijk de grafieken en tabellen voor inzicht in je financiële gegevens.
+3. **Exporteren**: Gebruik de knoppen om de gegevens te exporteren of af te drukken.
+
+Meer informatie over het dashboard zie `README_Dashboard.md`
+
+## Licentie
+
+Dit project is bedoeld voor persoonlijk gebruik en kan vrij worden aangepast en uitgebreid.   
 
 Dit project is beschikbaar onder de MIT-licentie.
