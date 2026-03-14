@@ -251,12 +251,9 @@ Horeca;Koffie;--;starbucks
 Horeca;Koffie;--;espresso house
 
 Horeca;Bezorging;Thuisbezorgd;thuisbezorgd
-Horeca;Catering;--;bon bon catering
 
-Horeca;Restaurant;--;soete suikerbol
-Horeca;Restaurant;--;huszar
-Horeca;Restaurant;--;de vier broers
-Horeca;Restaurant;--;Toko Ang
+Horeca;Restaurant;--;Konijnenvoer
+Horeca;Restaurant;--;De Librije
 
 Horeca;Fastfood;--;mcdonalds;mcd
 Horeca;Fastfood;--;burger king
