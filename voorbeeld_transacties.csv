@@ -1,0 +1,88 @@
+Datum;Eigen_rekening;Tegen_rekening;Ontvanger;Omschrijving;Bedrag;Saldo;Categorie;Subcategorie;Detail;Canonical_naam;Match_source
+01-01-2023;IBAN;IBAN;Albert Heijn;Albert Heijn Amsterdam;-50,00;1500,00;Huishouden;Boodschappen;Supermarkt;albert heijn;1 - CANONICAL_EXACT
+02-01-2023;IBAN;IBAN;AH;AH Den Haag;-30,00;1470,00;Huishouden;Boodschappen;Supermarkt;albert heijn;2 - ALIAS_EXACT
+03-01-2023;IBAN;IBAN;Appie;Appie Rotterdam;-25,00;1445,00;Huishouden;Boodschappen;Supermarkt;albert heijn;2 - ALIAS_EXACT
+04-01-2023;IBAN;IBAN;Lidl;Lidl Utrecht;-40,00;1405,00;Huishouden;Boodschappen;Supermarkt;lidl;1 - CANONICAL_EXACT
+05-01-2023;IBAN;IBAN;Shell;Shell Tanken;-60,00;1345,00;Auto;Tanken;Shell;shell;1 - CANONICAL_EXACT
+06-01-2023;IBAN;IBAN;BP;BP Tanken;-55,00;1290,00;Auto;Tanken;BP;bp;1 - CANONICAL_EXACT
+07-01-2023;IBAN;IBAN;KPN;KPN Factuur;-35,00;1255,00;Abonnement;Internet/Mobiel;KPN;kpn;1 - CANONICAL_EXACT
+08-01-2023;IBAN;IBAN;Ziggo;Ziggo Factuur;-45,00;1210,00;Abonnement;Internet/Mobiel;Ziggo;ziggo;1 - CANONICAL_EXACT
+09-01-2023;IBAN;IBAN;Netflix;Netflix Abonnement;-12,00;1198,00;Abonnement;Streaming;Video-Netflix;netflix;1 - CANONICAL_EXACT
+10-01-2023;IBAN;IBAN;HBO Max;HBO Max Abonnement;-15,00;1183,00;Abonnement;Streaming;Video-HBO;hbo max;1 - CANONICAL_EXACT
+11-01-2023;IBAN;IBAN;Etos;Etos Winkelen;-20,00;1163,00;Verzorging;Drogist;Etos;etos;1 - CANONICAL_EXACT
+12-01-2023;IBAN;IBAN;Kruidvat;Kruidvat Winkelen;-18,00;1145,00;Verzorging;Drogist;Kruidvat;kruidvat;1 - CANONICAL_EXACT
+13-01-2023;IBAN;IBAN;NS;NS Treinkaartje;-10,00;1135,00;Vervoer;OV;NS;ns;1 - CANONICAL_EXACT
+14-01-2023;IBAN;IBAN;RET;RET Ov-chipkaart;-8,00;1127,00;Vervoer;OV;RET;ret;1 - CANONICAL_EXACT
+15-01-2023;IBAN;IBAN;Uber;Uber Rit;-25,00;1102,00;Vervoer;Taxi;Uber;uber;1 - CANONICAL_EXACT
+16-01-2023;IBAN;IBAN;Bolt;Bolt Rit;-20,00;1082,00;Vervoer;Taxi;Bolt;bolt;1 - CANONICAL_EXACT
+17-01-2023;IBAN;IBAN;H&M;H&M Kleding;-50,00;1032,00;Kleding;Mode;--;hm;1 - CANONICAL_EXACT
+18-01-2023;IBAN;IBAN;Zara;Zara Kleding;-70,00;962,00;Kleding;Mode;--;zara;1 - CANONICAL_EXACT
+19-01-2023;IBAN;IBAN;Hema;Hema Winkelen;-30,00;932,00;Kleding;Warenhuis;Hema;hema;1 - CANONICAL_EXACT
+20-01-2023;IBAN;IBAN;MediaMarkt;MediaMarkt Aankoop;-200,00;732,00;Elektronica;Aankopen;MediaMarkt;mediamarkt;1 - CANONICAL_EXACT
+21-01-2023;IBAN;IBAN;CoolBlue;CoolBlue Aankoop;-150,00;582,00;Elektronica;Aankopen;CoolBlue;coolblue;1 - CANONICAL_EXACT
+22-01-2023;IBAN;IBAN;McDonalds;McDonalds Maaltijd;-15,00;567,00;Horeca;Fastfood;--;mcdonalds;1 - CANONICAL_EXACT
+23-01-2023;IBAN;IBAN;Burger King;Burger King Maaltijd;-12,00;555,00;Horeca;Fastfood;--;burger king;1 - CANONICAL_EXACT
+24-01-2023;IBAN;IBAN;KFC;KFC Maaltijd;-18,00;537,00;Horeca;Fastfood;--;kfc;1 - CANONICAL_EXACT
+25-01-2023;IBAN;IBAN;Salaris;Salaris Januari;2500,00;3037,00;Inkomsten;Salaris;--;salaris;1 - CANONICAL_EXACT
+26-01-2023;IBAN;IBAN;Belastingdienst;Belasting Teruggave;300,00;3337,00;Belastingen;Belastingdienst;--;belastingdienst;1 - CANONICAL_EXACT
+27-01-2023;IBAN;IBAN;Gemeente;Gemeentelijke Belastingen;-100,00;3237,00;Belastingen;Gemeente;--;gemeentelijke belastingen;1 - CANONICAL_EXACT
+28-01-2023;IBAN;IBAN;Hypotheek;Hypotheek Betaling;-800,00;2437,00;Hypotheek;Hypotheek;hypotheek;IncassoID;7 - IBAN_HARD_MATCH
+29-01-2023;IBAN;IBAN;Zorgverzekering;Zorgverzekering;-120,00;2317,00;Zorg;Vergoeding;--;vergoeding;1 - CANONICAL_EXACT
+30-01-2023;IBAN;IBAN;Kinderen;Kinderopvang Toeslag;200,00;2517,00;Kinderen;Kinderopvang;Toeslag;kinderopvangtoeslag;1 - CANONICAL_EXACT
+31-01-2023;IBAN;IBAN;SVB;Kinderbijslag;150,00;2667,00;Kinderen;Kinderbijslag;SVB;svb;1 - CANONICAL_EXACT
+01-02-2023;IBAN;IBAN;Albert Heijn;Albert Heijn Amsterdam;-45,00;2622,00;Huishouden;Boodschappen;Supermarkt;albert heijn;1 - CANONICAL_EXACT
+02-02-2023;IBAN;IBAN;AH;AH Den Haag;-35,00;2587,00;Huishouden;Boodschappen;Supermarkt;albert heijn;2 - ALIAS_EXACT
+03-02-2023;IBAN;IBAN;Lidl;Lidl Utrecht;-42,00;2545,00;Huishouden;Boodschappen;Supermarkt;lidl;1 - CANONICAL_EXACT
+04-02-2023;IBAN;IBAN;Shell;Shell Tanken;-65,00;2480,00;Auto;Tanken;Shell;shell;1 - CANONICAL_EXACT
+05-02-2023;IBAN;IBAN;BP;BP Tanken;-58,00;2422,00;Auto;Tanken;BP;bp;1 - CANONICAL_EXACT
+06-02-2023;IBAN;IBAN;KPN;KPN Factuur;-38,00;2384,00;Abonnement;Internet/Mobiel;KPN;kpn;1 - CANONICAL_EXACT
+07-02-2023;IBAN;IBAN;Ziggo;Ziggo Factuur;-48,00;2336,00;Abonnement;Internet/Mobiel;Ziggo;ziggo;1 - CANONICAL_EXACT
+08-02-2023;IBAN;IBAN;Netflix;Netflix Abonnement;-12,00;2324,00;Abonnement;Streaming;Video-Netflix;netflix;1 - CANONICAL_EXACT
+09-02-2023;IBAN;IBAN;HBO Max;HBO Max Abonnement;-15,00;2309,00;Abonnement;Streaming;Video-HBO;hbo max;1 - CANONICAL_EXACT
+10-02-2023;IBAN;IBAN;Etos;Etos Winkelen;-22,00;2287,00;Verzorging;Drogist;Etos;etos;1 - CANONICAL_EXACT
+11-02-2023;IBAN;IBAN;Kruidvat;Kruidvat Winkelen;-20,00;2267,00;Verzorging;Drogist;Kruidvat;kruidvat;1 - CANONICAL_EXACT
+12-02-2023;IBAN;IBAN;NS;NS Treinkaartje;-12,00;2255,00;Vervoer;OV;NS;ns;1 - CANONICAL_EXACT
+13-02-2023;IBAN;IBAN;RET;RET Ov-chipkaart;-10,00;2245,00;Vervoer;OV;RET;ret;1 - CANONICAL_EXACT
+14-02-2023;IBAN;IBAN;Uber;Uber Rit;-30,00;2215,00;Vervoer;Taxi;Uber;uber;1 - CANONICAL_EXACT
+15-02-2023;IBAN;IBAN;Bolt;Bolt Rit;-22,00;2193,00;Vervoer;Taxi;Bolt;bolt;1 - CANONICAL_EXACT
+16-02-2023;IBAN;IBAN;H&M;H&M Kleding;-55,00;2138,00;Kleding;Mode;--;hm;1 - CANONICAL_EXACT
+17-02-2023;IBAN;IBAN;Zara;Zara Kleding;-75,00;2063,00;Kleding;Mode;--;zara;1 - CANONICAL_EXACT
+18-02-2023;IBAN;IBAN;Hema;Hema Winkelen;-35,00;2028,00;Kleding;Warenhuis;Hema;hema;1 - CANONICAL_EXACT
+19-02-2023;IBAN;IBAN;MediaMarkt;MediaMarkt Aankoop;-220,00;1808,00;Elektronica;Aankopen;MediaMarkt;mediamarkt;1 - CANONICAL_EXACT
+20-02-2023;IBAN;IBAN;CoolBlue;CoolBlue Aankoop;-160,00;1648,00;Elektronica;Aankopen;CoolBlue;coolblue;1 - CANONICAL_EXACT
+21-02-2023;IBAN;IBAN;McDonalds;McDonalds Maaltijd;-18,00;1630,00;Horeca;Fastfood;--;mcdonalds;1 - CANONICAL_EXACT
+22-02-2023;IBAN;IBAN;Burger King;Burger King Maaltijd;-15,00;1615,00;Horeca;Fastfood;--;burger king;1 - CANONICAL_EXACT
+23-02-2023;IBAN;IBAN;KFC;KFC Maaltijd;-20,00;1595,00;Horeca;Fastfood;--;kfc;1 - CANONICAL_EXACT
+24-02-2023;IBAN;IBAN;Salaris;Salaris Februari;2500,00;4095,00;Inkomsten;Salaris;--;salaris;1 - CANONICAL_EXACT
+25-02-2023;IBAN;IBAN;Belastingdienst;Belasting Teruggave;350,00;4445,00;Belastingen;Belastingdienst;--;belastingdienst;1 - CANONICAL_EXACT
+26-02-2023;IBAN;IBAN;Gemeente;Gemeentelijke Belastingen;-110,00;4335,00;Belastingen;Gemeente;--;gemeentelijke belastingen;1 - CANONICAL_EXACT
+27-02-2023;IBAN;IBAN;Hypotheek;Hypotheek Betaling;-800,00;3535,00;Hypotheek;Hypotheek;hypotheek;IncassoID;7 - IBAN_HARD_MATCH
+28-02-2023;IBAN;IBAN;Zorgverzekering;Zorgverzekering;-130,00;3405,00;Zorg;Vergoeding;--;vergoeding;1 - CANONICAL_EXACT
+01-03-2023;IBAN;IBAN;Albert Heijn;Albert Heijn Amsterdam;-55,00;3350,00;Huishouden;Boodschappen;Supermarkt;albert heijn;1 - CANONICAL_EXACT
+02-03-2023;IBAN;IBAN;AH;AH Den Haag;-40,00;3310,00;Huishouden;Boodschappen;Supermarkt;albert heijn;2 - ALIAS_EXACT
+03-03-2023;IBAN;IBAN;Lidl;Lidl Utrecht;-45,00;3265,00;Huishouden;Boodschappen;Supermarkt;lidl;1 - CANONICAL_EXACT
+04-03-2023;IBAN;IBAN;Shell;Shell Tanken;-70,00;3195,00;Auto;Tanken;Shell;shell;1 - CANONICAL_EXACT
+05-03-2023;IBAN;IBAN;BP;BP Tanken;-60,00;3135,00;Auto;Tanken;BP;bp;1 - CANONICAL_EXACT
+06-03-2023;IBAN;IBAN;KPN;KPN Factuur;-40,00;3095,00;Abonnement;Internet/Mobiel;KPN;kpn;1 - CANONICAL_EXACT
+07-03-2023;IBAN;IBAN;Ziggo;Ziggo Factuur;-50,00;3045,00;Abonnement;Internet/Mobiel;Ziggo;ziggo;1 - CANONICAL_EXACT
+08-03-2023;IBAN;IBAN;Netflix;Netflix Abonnement;-12,00;3033,00;Abonnement;Streaming;Video-Netflix;netflix;1 - CANONICAL_EXACT
+09-03-2023;IBAN;IBAN;HBO Max;HBO Max Abonnement;-15,00;3018,00;Abonnement;Streaming;Video-HBO;hbo max;1 - CANONICAL_EXACT
+10-03-2023;IBAN;IBAN;Etos;Etos Winkelen;-25,00;2993,00;Verzorging;Drogist;Etos;etos;1 - CANONICAL_EXACT
+11-03-2023;IBAN;IBAN;Kruidvat;Kruidvat Winkelen;-22,00;2971,00;Verzorging;Drogist;Kruidvat;kruidvat;1 - CANONICAL_EXACT
+12-03-2023;IBAN;IBAN;NS;NS Treinkaartje;-15,00;2956,00;Vervoer;OV;NS;ns;1 - CANONICAL_EXACT
+13-03-2023;IBAN;IBAN;RET;RET Ov-chipkaart;-12,00;2944,00;Vervoer;OV;RET;ret;1 - CANONICAL_EXACT
+14-03-2023;IBAN;IBAN;Uber;Uber Rit;-35,00;2909,00;Vervoer;Taxi;Uber;uber;1 - CANONICAL_EXACT
+15-03-2023;IBAN;IBAN;Bolt;Bolt Rit;-25,00;2884,00;Vervoer;Taxi;Bolt;bolt;1 - CANONICAL_EXACT
+16-03-2023;IBAN;IBAN;H&M;H&M Kleding;-60,00;2824,00;Kleding;Mode;--;hm;1 - CANONICAL_EXACT
+17-03-2023;IBAN;IBAN;Zara;Zara Kleding;-80,00;2744,00;Kleding;Mode;--;zara;1 - CANONICAL_EXACT
+18-03-2023;IBAN;IBAN;Hema;Hema Winkelen;-40,00;2704,00;Kleding;Warenhuis;Hema;hema;1 - CANONICAL_EXACT
+19-03-2023;IBAN;IBAN;MediaMarkt;MediaMarkt Aankoop;-250,00;2454,00;Elektronica;Aankopen;MediaMarkt;mediamarkt;1 - CANONICAL_EXACT
+20-03-2023;IBAN;IBAN;CoolBlue;CoolBlue Aankoop;-180,00;2274,00;Elektronica;Aankopen;CoolBlue;coolblue;1 - CANONICAL_EXACT
+21-03-2023;IBAN;IBAN;McDonalds;McDonalds Maaltijd;-20,00;2254,00;Horeca;Fastfood;--;mcdonalds;1 - CANONICAL_EXACT
+22-03-2023;IBAN;IBAN;Burger King;Burger King Maaltijd;-18,00;2236,00;Horeca;Fastfood;--;burger king;1 - CANONICAL_EXACT
+23-03-2023;IBAN;IBAN;KFC;KFC Maaltijd;-22,00;2214,00;Horeca;Fastfood;--;kfc;1 - CANONICAL_EXACT
+24-03-2023;IBAN;IBAN;Salaris;Salaris Maart;2500,00;4714,00;Inkomsten;Salaris;--;salaris;1 - CANONICAL_EXACT
+25-03-2023;IBAN;IBAN;Belastingdienst;Belasting Teruggave;400,00;5114,00;Belastingen;Belastingdienst;--;belastingdienst;1 - CANONICAL_EXACT
+26-03-2023;IBAN;IBAN;Gemeente;Gemeentelijke Belastingen;-120,00;4994,00;Belastingen;Gemeente;--;gemeentelijke belastingen;1 - CANONICAL_EXACT
+27-03-2023;IBAN;IBAN;Hypotheek;Hypotheek Betaling;-800,00;4194,00;Hypotheek;Hypotheek;hypotheek;IncassoID;7 - IBAN_HARD_MATCH
+28-03-2023;IBAN;IBAN;Zorgverzekering;Zorgverzekering;-140,00;4054,00;Zorg;Vergoeding;--;vergoeding;1 - CANONICAL_EXACT
